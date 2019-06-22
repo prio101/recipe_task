@@ -5,7 +5,7 @@ class Recipe
       if block_given?
         instance_eval(&block)
       else
-        raise NotImplementedError
+        "Pass a block"
       end
     end
 
@@ -52,7 +52,7 @@ class Recipe
       ensure
         file.close
       end
-      puts("#{recipe_name} = #{@ingredients}")
+      'Recipe save success'
     end
 
     def find
